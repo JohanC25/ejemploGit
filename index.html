@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card-container">
+
+    <div class="card sedans">
+      <img src="images/icon-sedans.svg" alt="Imagen Sedan">
+      <br>
+      <br>
+      <h2>SEDANS</h2>
+      <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next
+        road trip.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="card suvs">
+      <img src="images/icon-suvs.svg" alt="Imagen SUVs">
+      <br>
+      <br>
+      <h2>SUVS</h2>
+      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and
+        off-road adventures.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="card luxury">
+      <img src="images/icon-luxury.svg" alt="Imagen Luxury">
+      <br>
+      <br>
+      <h2>LUXURY</h2>
+      <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and
+        arrive in style.</p>
+      <button>Learn More</button>
+    </div>
+
+  </div>
+
+</body>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    flex-basis: 30%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 15px;
+    height: 85vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-content {
+    padding-top: 80px; /* Adjust based on the size of your image and your desired spacing */
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .sedans {
+    background-color: #FF8C00;
+  }
+
+  .suvs {
+    background-color: #008080;
+  }
+
+  .luxury {
+    background-color: #004040;
+  }
+
+  .card img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h2 {
+    color: #fff;
+    margin: 0;
+  }
+
+  p {
+    color: #fff;
+    margin: 20px 0;
+  }
+
+  button {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover button {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      max-width: 100%;
+    }
+  }
+</style>
+
+</html>
